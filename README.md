@@ -30,10 +30,8 @@ The simulation covers:
 
 ### BER vs SNR — AWGN Channel
 
-> **📌 Insert image here:** `fig1_ber_awgn.png`
-> *(This plot shows simulated BER matching theoretical curves — your most important validation result. Add it here to prove the simulation is correct.)*
+<img width="872" height="654" alt="fig1_ber_awgn" src="https://github.com/user-attachments/assets/17be0b0e-296a-4b43-bd34-18d1df174abb" />
 
-![BER vs SNR AWGN](images/fig1_ber_awgn.png)
 
 The simulated BER curves closely match the theoretical formulas, confirming the correctness of the implementation:
 
@@ -47,73 +45,53 @@ The simulated BER curves closely match the theoretical formulas, confirming the 
 
 ### BER vs SNR — Rayleigh Fading Channel
 
-> **📌 Insert image here:** `fig2_ber_rayleigh.png`
-> *(Shows the severe impact of Rayleigh fading vs AWGN. Place this directly below the AWGN plot for comparison.)*
+<img width="872" height="654" alt="fig2_ber_rayleigh" src="https://github.com/user-attachments/assets/6542146e-1a9b-4876-8649-bae6c6401214" />
 
-![BER vs SNR Rayleigh](images/fig2_ber_rayleigh.png)
-
----
 
 ### AWGN vs Rayleigh — Side-by-Side Comparison
 
-> **📌 Insert image here:** `fig3_awgn_vs_rayleigh.png`
-> *(Three-panel comparison showing AWGN vs Rayleigh for each modulation scheme. Best placed after individual BER plots.)*
+<img width="1271" height="402" alt="fig3_awgn_vs_rayleigh" src="https://github.com/user-attachments/assets/46c30a72-f00c-45d0-91c9-1b5cdbf77d01" />
 
-![AWGN vs Rayleigh Comparison](images/fig3_awgn_vs_rayleigh.png)
 
 ---
 
 ### Constellation Diagrams (TX · AWGN RX · Rayleigh RX)
-
-> **📌 Insert image here:** `fig4_constellations.png`
-> *(3×3 grid: column 1 = ideal TX, column 2 = received after AWGN at 20 dB, column 3 = received after Rayleigh + equalization. Shows visually how noise scatters constellation points.)*
-
-![Constellation Diagrams](images/fig4_constellations.png)
+<img width="1165" height="900" alt="fig4_constellations" src="https://github.com/user-attachments/assets/827d0401-ad64-4284-baaf-963e78227fc7" />
 
 ---
 
 ### Error Vector Magnitude (EVM) vs SNR
 
-> **📌 Insert image here:** `fig5_evm.png`
-> *(Industry-standard quality metric. Place after constellation diagrams — it quantifies what the constellations show visually.)*
+<img width="872" height="654" alt="fig5_evm" src="https://github.com/user-attachments/assets/5fb2f1fd-71a1-47ba-958f-38152ae6c076" />
 
-![EVM vs SNR](images/fig5_evm.png)
 
 ---
 
 ### OFDM Signal Analysis
 
-> **📌 Insert image here:** `fig6_signal_analysis.png`
-> *(Six-panel figure showing time-domain signal, subcarrier allocation, PSD, cyclic prefix verification, and subcarrier breakdown. Best placed in the "Signal Analysis" section.)*
+<img width="1165" height="794" alt="fig6_signal_analysis" src="https://github.com/user-attachments/assets/9b572b3d-1a5f-455d-81f3-1d0ef02622b2" />
 
-![OFDM Signal Analysis](images/fig6_signal_analysis.png)
 
 ---
 
 ### Spectral Efficiency vs Shannon Bound
 
-> **📌 Insert image here:** `fig7_spectral_efficiency.png`
-> *(Shows how close each scheme gets to the theoretical Shannon capacity limit. Place in the "Performance Analysis" section.)*
+<img width="872" height="654" alt="fig7_spectral_efficiency" src="https://github.com/user-attachments/assets/bd096ae7-f618-4656-9db7-4a76858d1769" />
 
-![Spectral Efficiency](images/fig7_spectral_efficiency.png)
 
 ---
 
 ### BER Heatmap
 
-> **📌 Insert image here:** `fig8_ber_heatmap.png`
-> *(Color-coded log₁₀(BER) across all modulation schemes and SNR values — both AWGN and Rayleigh. Great visual summary.)*
 
-![BER Heatmap](images/fig8_ber_heatmap.png)
+<img width="1059" height="402" alt="fig8_ber_heatmap" src="https://github.com/user-attachments/assets/6c2e2cf7-70ac-4ce8-8199-326940d4fd10" />
 
 ---
 
 ### SNR Requirements for BER Targets
 
-> **📌 Insert image here:** `fig9_snr_requirements.png`
-> *(Bar chart showing required SNR to achieve BER < 1%, 0.1%, 0.01%. Useful for link budget discussions.)*
 
-![SNR Requirements](images/fig9_snr_requirements.png)
+<img width="953" height="529" alt="fig9_snr_requirements" src="https://github.com/user-attachments/assets/da90dba3-1a93-4400-873f-80415ae52e9b" />
 
 ---
 
@@ -156,80 +134,8 @@ The simulated BER curves closely match the theoretical formulas, confirming the 
 
 ---
 
-## 🔧 Prerequisites
 
-| Requirement | Details |
-|:---|:---|
-| **GNU Octave** | Version 6.0 or higher |
-| **Packages** | None — fully self-contained |
-| **OS** | Windows / macOS / Linux |
-
-No external toolboxes required. All functions (`bi2de`, `de2bi` equivalents, windowing) are implemented natively.
-
----
-
-## 🚀 Installation & Execution
-
-### Step 1 — Install Octave
-
-**Ubuntu / Debian:**
-```bash
-sudo apt-get install octave
-```
-
-**macOS (Homebrew):**
-```bash
-brew install octave
-```
-
-**Windows:**
-Download the installer from [https://octave.org/download](https://octave.org/download)
-
----
-
-### Step 2 — Clone the Repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/ofdm-transceiver-simulation.git
-cd ofdm-transceiver-simulation
-```
-
----
-
-### Step 3 — Create Output Folder
-
-```bash
-mkdir ofdm_results
-```
-
-Or from inside Octave:
-```matlab
-mkdir('ofdm_results')
-```
-
----
-
-### Step 4 — Run the Simulation
-
-**From terminal:**
-```bash
-octave ofdm_transceiver.m
-```
-
-**Headless (no GUI / server):**
-```bash
-octave-cli ofdm_transceiver.m
-```
-
-**From inside Octave interactive shell:**
-```matlab
-cd /path/to/project
-ofdm_transceiver
-```
-
----
-
-### Step 5 — View Results
+### Step 4 — View Results
 
 All output figures are saved as `.png` files in the `ofdm_results/` folder:
 
@@ -312,71 +218,15 @@ QPSK       |    ~12 dB      |  96 bits/sym |  ★★★★☆
 
 ---
 
-## 🔬 Technical Details
 
-### Theoretical BER Formulas
-
-```
-BPSK  : BER = 0.5 × erfc(√SNR)
-QPSK  : BER = 0.5 × erfc(√SNR)          [same as BPSK per bit]
-8-PSK : BER ≈ (2/3) × erfc(√(SNR·log₂8) × sin(π/8))
-```
-
-### Subcarrier Allocation
-
-```
-Bin 1        → DC null (prevents DC offset corruption)
-Bins 2–27    → Active (data + pilots)
-Bins 28–38   → Upper guard band
-Bins 39–64   → Active (data + pilots)
-
-Pilot positions: 7, 21, 43, 57  (known 1+0j symbols)
-Data positions : remaining 48 active bins
-```
-
----
-
-## 🚧 Possible Extensions
-
-- **Channel coding** — add convolutional or LDPC codes for coding gain
-- **MMSE equalization** — better noise suppression than LS
-- **Frequency-selective fading** — tapped delay line multipath model
-- **Higher-order modulation** — 16-QAM, 64-QAM, 256-QAM
-- **OFDM synchronization** — timing offset and carrier frequency offset correction
-- **MIMO-OFDM** — multiple transmit/receive antennas for spatial multiplexing
-- **Real channel measurements** — replace synthetic channel with measured impulse responses
-
----
-
-## 📚 References
-
-- Proakis, J. G., & Salehi, M. — *Digital Communications*, 5th Edition
-- Haykin, S. — *Communication Systems*, 4th Edition
-- IEEE 802.11a Standard — OFDM PHY specification
-- Goldsmith, A. — *Wireless Communications*, Cambridge University Press
-- 3GPP TS 36.211 — LTE Physical Channels and Modulation
-
----
-
-## 🧾 License
-
-This project is released under the **MIT License** — free to use, modify, and distribute for academic and personal purposes.
-
----
 
 ## 👨‍💻 Author
 
-**[Your Name]**
+**[Nandhini V]**
 - Department of Electronics and Communication Engineering
 - Project: OFDM Transceiver System Simulation
-- Tools: GNU Octave 8.x
+- Tools: Matlab or GNU Octave 8.x
 
 ---
 
-## ⭐ Acknowledgements
 
-This simulation is inspired by real-world OFDM deployments in Wi-Fi (IEEE 802.11a) and implements core PHY layer concepts described in standard digital communications textbooks. The subcarrier allocation mirrors the 802.11a standard for educational accuracy.
-
----
-
-> 💡 **Tip for GitHub:** After running the simulation, create an `images/` folder in your repository, copy all `fig*.png` files into it, then commit and push. The images will automatically appear in this README.
