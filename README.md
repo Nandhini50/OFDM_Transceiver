@@ -1,6 +1,6 @@
 # 📡 OFDM Transceiver System Simulation
 
-> A complete end-to-end **Orthogonal Frequency Division Multiplexing (OFDM)** transceiver simulation implemented in GNU Octave, featuring **BPSK**, **QPSK**, and **8-PSK** modulation schemes with AWGN and Rayleigh fading channel models.
+> A complete end-to-end **Orthogonal Frequency Division Multiplexing (OFDM)** transceiver simulation implemented in Matlab or  GNU Octave, featuring **BPSK**, **QPSK**, and **8-PSK** modulation schemes with AWGN and Rayleigh fading channel models.
 
 ---
 
